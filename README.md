@@ -14,7 +14,7 @@ GameNest is a feature-rich gaming platform designed and deployed using React.js.
 - **Frontend:** React.js, React Router, Context API
 - **Backend:** Node.js, Express.js, MongoDB
 - **Authentication:** JWT-based authentication
-- **Deployment:** Netlify (Frontend), Heroku (Backend)
+- **Deployment:** Netlify (Frontend), Render(Backend)
 - **Version Control:** Git & GitHub
 
 ## Setup Instructions
