@@ -5,7 +5,6 @@ GameNest is a feature-rich gaming platform designed and deployed using React.js.
 
 ## Features
 - 🎮 **Game Library** – Browse and play various games seamlessly.
-- 🏆 **Tournaments** – Compete in online tournaments and climb the leaderboard.
 - 📊 **Leaderboard** – Track player rankings and scores.
 - 🔐 **User Authentication** – Secure login and registration using JWT authentication.
 - 🚀 **Optimized Navigation** – Implemented using React Router for a smooth user experience.
