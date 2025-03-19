@@ -16,17 +16,22 @@ const ProfilePage = () => {
   const [saveLoading, setSaveLoading] = useState(false);
 
   const navigate = useNavigate();
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('authToken');
 
   // Fetch user profile data on component mount
   useEffect(() => {
     if (!token) {
-      navigate('/login');
+      navigate('/auth/login');
       return;
     }
     fetchUserProfile();
   }, [token, navigate]);
-
+    if (!token) {
+    setError("No authentication token found. Please log in again.");
+    setLoading(false);
+    return;
+    }
+    console.log("Using token:", token.substring(0, 10) + "...");
   // Function to fetch user profile data
   const fetchUserProfile = async () => {
     try {
@@ -43,8 +48,8 @@ const ProfilePage = () => {
       });
 
       if (response.status === 401) {
-        localStorage.removeItem('token');
-        navigate('/login');
+        localStorage.removeItem('authToken');
+        navigate('/auth/login');
         throw new Error('Session expired. Please log in again.');
       }
 
@@ -74,6 +79,7 @@ const ProfilePage = () => {
 
       if (!description.trim()) {
         setError('Description cannot be empty.');
+        setSaveLoading(false);
         return;
       }
 
@@ -88,8 +94,8 @@ const ProfilePage = () => {
       });
 
       if (response.status === 401) {
-        localStorage.removeItem('token');
-        navigate('/login');
+        localStorage.removeItem('authToken');
+        navigate('/auth/login');
         throw new Error('Session expired. Please log in again.');
       }
 
@@ -107,6 +113,51 @@ const ProfilePage = () => {
       setError(err.message);
     } finally {
       setSaveLoading(false);
+    }
+  };
+
+  // Function to record a game visit
+  const recordGameVisit = async (gameName, duration, completed) => {
+    try {
+      const response = await fetch(`${API_URL}/game/visit`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({ 
+          gameName, 
+          duration, 
+          completed 
+        }),
+      });
+
+      if (response.status === 401) {
+        localStorage.removeItem('authToken');
+        navigate('/auth/login');
+        throw new Error('Session expired. Please log in again.');
+      }
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to record game visit.');
+      }
+
+      const gameData = await response.json();
+      setStreak(gameData.streak || 0);
+      setFavoriteGame(gameData.favoriteGame || '');
+      
+      // Update games played count in userData
+      if (completed && userData) {
+        setUserData({
+          ...userData,
+          gamesPlayed: (userData.gamesPlayed || 0) + 1
+        });
+      }
+    } catch (err) {
+      console.error('Error recording game visit:', err);
+      setError(err.message);
     }
   };
 
@@ -134,6 +185,12 @@ const ProfilePage = () => {
           <AlertCircle className="h-5 w-5 text-red-600" />
           <span className="ml-2 text-red-600">{error}</span>
         </div>
+        <button 
+          onClick={fetchUserProfile}
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        >
+          Try Again
+        </button>
       </div>
     );
   }
@@ -245,7 +302,7 @@ const ProfilePage = () => {
               </li>
               <li className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2 text-green-500" />
-                Member since: {new Date(userData?.createdAt).toLocaleDateString()}
+                Member since: {userData?.createdAt ? new Date(userData.createdAt).toLocaleDateString() : 'N/A'}
               </li>
             </ul>
           </div>

@@ -12,7 +12,7 @@ const JokerMemoryGame = () => {
       description: 'Gotham City Mayhem',
       difficulty: 1,
       color: '#6B21A8',
-      backgroundImage: '/images/gotham-skyline.jpg'
+      backgroundImage: '/images/gotham.jpg'
     },
     DARK_KNIGHT: {
       cards: [

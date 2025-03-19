@@ -8,7 +8,7 @@ const HomePage = ({ onGetStarted }) => (
         Welcome to GameNest
       </h1>
       <p className="text-xl text-blue-900 mb-8 max-w-2xl mx-auto">
-        Dive into a world of endless gaming fun! GameNest brings you a curated collection of engaging mini-games that challenge your skills, boost your reflexes, and provide hours of entertainment.
+       Dive into a world of endless gaming fun! GameNest brings you a curated collection of engaging mini-games that challenge your skills, boost your reflexes, and provide hours of entertainment.
       </p>
       <button 
         onClick={onGetStarted}

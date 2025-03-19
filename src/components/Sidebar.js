@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Users, GamepadIcon, LogOut } from 'lucide-react';
+import { User, Trophy, GamepadIcon, LogOut } from 'lucide-react';
 
 const Sidebar = ({ user, onLogout, onViewChange, activeView }) => {
   if (!user) return null; // Don't render sidebar if no user
@@ -47,13 +47,13 @@ const Sidebar = ({ user, onLogout, onViewChange, activeView }) => {
         </button>
         
         <button 
-          onClick={() => onViewChange('invite')}
+          onClick={() => onViewChange('scoreboard')}
           className={`w-full px-4 py-2 rounded-md text-left font-medium flex items-center space-x-2 ${
-            activeView === 'invite' ? 'bg-blue-200 text-blue-900' : 'text-blue-800'
+            activeView === 'scoreboard' ? 'bg-blue-200 text-blue-900' : 'text-blue-800'
           }`}
         >
-          <Users className="w-4 h-4" />
-          <span>Invite Friends</span>
+          <Trophy className="w-4 h-4" />
+          <span>Scoreboard</span>
         </button>
 
         <button 

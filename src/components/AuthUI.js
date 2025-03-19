@@ -8,17 +8,13 @@ const AuthUI = ({ onLogin }) => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Password validation regex
   const validatePassword = (password) => {
-    const regex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return regex.test(password);
   };
 
-  // Token format verification
   const isTokenValid = (token) => typeof token === "string" && token.length > 0;
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -85,14 +81,8 @@ const AuthUI = ({ onLogin }) => {
           }
 
           @keyframes fadeSlideDown {
-            0% {
-              opacity: 0;
-              transform: translateY(-30px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
           }
         `}
       </style>
@@ -108,24 +98,14 @@ const AuthUI = ({ onLogin }) => {
               }`}
             ></div>
             <button
-              className={`w-1/2 text-center py-2 z-10 ${
-                !isSignUp ? "text-white" : "text-gray-500"
-              }`}
-              onClick={() => {
-                setIsSignUp(false);
-                setErrorMessage("");
-              }}
+              className={`w-1/2 text-center py-2 z-10 ${!isSignUp ? "text-white" : "text-gray-500"}`}
+              onClick={() => { setIsSignUp(false); setErrorMessage(""); }}
             >
               Login
             </button>
             <button
-              className={`w-1/2 text-center py-2 z-10 ${
-                isSignUp ? "text-white" : "text-gray-500"
-              }`}
-              onClick={() => {
-                setIsSignUp(true);
-                setErrorMessage("");
-              }}
+              className={`w-1/2 text-center py-2 z-10 ${isSignUp ? "text-white" : "text-gray-500"}`}
+              onClick={() => { setIsSignUp(true); setErrorMessage(""); }}
             >
               Sign Up
             </button>

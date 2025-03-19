@@ -5,7 +5,7 @@ import AuthUI from './components/AuthUI';
 import GameSelector from './components/GameSelection';
 import Sidebar from './components/Sidebar';
 import ProfilePage from './components/ProfilePage';
-import InvitePage from './components/InvitePage';
+import Scoreboard from './components/scoreboard';
 import './index.css';
 
 const App = () => {
@@ -57,8 +57,8 @@ const App = () => {
         return <ProfilePage />;
       case 'games':
         return <GameSelector />;
-      case 'invite':
-        return <InvitePage />;
+      case 'scoreboard':
+        return <Scoreboard />;
       default:
         return <GameSelector />;
     }
