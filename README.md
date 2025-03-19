@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# GameNest - Online Gaming Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+GameNest is a feature-rich gaming platform designed and deployed using React.js. It offers a game library, tournaments, and leaderboards for an interactive user experience. The frontend is deployed on Netlify, ensuring scalability and fast performance. The backend is powered by MongoDB and secured with JWT-based authentication.
 
-## Available Scripts
+## Features
+- 🎮 **Game Library** – Browse and play various games seamlessly.
+- 🏆 **Tournaments** – Compete in online tournaments and climb the leaderboard.
+- 📊 **Leaderboard** – Track player rankings and scores.
+- 🔐 **User Authentication** – Secure login and registration using JWT authentication.
+- 🚀 **Optimized Navigation** – Implemented using React Router for a smooth user experience.
+- 📦 **State Management** – Context API ensures efficient data handling.
 
-In the project directory, you can run:
+## Technologies Used
+- **Frontend:** React.js, React Router, Context API
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JWT-based authentication
+- **Deployment:** Netlify (Frontend), Heroku (Backend)
+- **Version Control:** Git & GitHub
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Setup
+```bash
+# Navigate to backend directory
+cd backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Install dependencies
+npm install
 
-### `npm test`
+# Start the server
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend Setup
+```bash
+# Navigate to frontend directory
+cd frontend
 
-### `npm run build`
+# Install dependencies
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start the React app
+npm run dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
+Here are some images showcasing the platform:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Authentication Page
+![Authentication](images/authentication.png)
 
-### `npm run eject`
+### Game Library
+![Games](images/games.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### User Profile Page
+![Profile](images/profile.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Scoreboard
+![Scoreboard](images/scoreboard.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Front Page
+![Front Page](images/frontpage.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
+Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License.
