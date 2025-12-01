@@ -64,5 +64,3 @@ Here are some images showcasing the platform:
 ## Contributing
 Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
 
-## License
-This project is licensed under the MIT License.
