@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap');
 
@@ -76,3 +77,5 @@ body{font-family:'Inter',sans-serif;background-color:var(--bg-primary);color:var
 .backface-hidden{backface-visibility:hidden}
 
 .score-up{animation:bounceIn 0.4s ease both;color:var(--success)}
+=======
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919

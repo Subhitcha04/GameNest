@@ -1,14 +1,33 @@
+<<<<<<< HEAD
 # ── Dependencies ──────────────────────────────
 node_modules/
 game-nest-backend/node_modules/
 
 # ── Environment Variables ──────────────────────
 .env
+=======
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+<<<<<<< HEAD
 # ── Production Build ───────────────────────────
 build/
 dist/
@@ -36,3 +55,8 @@ coverage/
 # ── Misc ──────────────────────────────────────
 .eslintcache
 *.pem
+=======
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919

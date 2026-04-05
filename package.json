@@ -2,6 +2,10 @@
   "name": "game-nest",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
+=======
+  "homepage": "https://Subhitcha04.github.io/GameNest/",
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919
   "dependencies": {
     "@sendgrid/mail": "^8.1.4",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -51,4 +55,8 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919

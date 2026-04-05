@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎮 GameNest — Online Gaming Platform v2.0
 
 > **Play. Compete. Dominate.**  
@@ -145,6 +146,33 @@ npm start
 ```bash
 # Navigate to backend directory
 cd game-nest-backend
+=======
+# GameNest - Online Gaming Platform
+
+## Overview
+GameNest is a feature-rich gaming platform designed and deployed using React.js. It offers a game library, tournaments, and leaderboards for an interactive user experience. The frontend is deployed on Netlify, ensuring scalability and fast performance. The backend is powered by MongoDB and secured with JWT-based authentication.
+
+## Features
+- 🎮 **Game Library** – Browse and play various games seamlessly.
+- 📊 **Leaderboard** – Track player rankings and scores.
+- 🔐 **User Authentication** – Secure login and registration using JWT authentication.
+- 🚀 **Optimized Navigation** – Implemented using React Router for a smooth user experience.
+- 📦 **State Management** – Context API ensures efficient data handling.
+
+## Technologies Used
+- **Frontend:** React.js, React Router, Context API
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JWT-based authentication
+- **Deployment:** Netlify (Frontend), Render(Backend)
+- **Version Control:** Git & GitHub
+
+## Setup Instructions
+
+### Backend Setup
+```bash
+# Navigate to backend directory
+cd backend
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919
 
 # Install dependencies
 npm install
@@ -153,6 +181,7 @@ npm install
 npm start
 ```
 
+<<<<<<< HEAD
 ### Build for Production
 
 ```bash
@@ -212,3 +241,38 @@ Feel free to fork and build upon it!
 <div align="center">
   <strong>GameNest © 2024 — Built with ❤️ using React.js</strong>
 </div>
+=======
+### Frontend Setup
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the React app
+npm run dev
+```
+
+## Screenshots
+Here are some images showcasing the platform:
+
+### Authentication Page
+![Authentication](images/authentication.png)
+
+### Game Library
+![Games](images/games.png)
+
+### User Profile Page
+![Profile](images/profile.png)
+
+### Scoreboard
+![Scoreboard](images/scoreboard.png)
+
+### Front Page
+![Front Page](images/frontpage.png)
+
+## Contributing
+Contributions are welcome! Feel free to fork this repository, create a new branch, and submit a pull request.
+
+>>>>>>> 609a6013bbb628b69c5b96e26dd98e9488525919
