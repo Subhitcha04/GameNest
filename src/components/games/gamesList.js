@@ -1,0 +1,12 @@
+export const games = [
+  { id: 'memory',    name: 'Joker Memory Game',               description: 'Test memory with this Joker-themed card matching game.',         image: '/images/memorycard.jpg',          emoji: '🃏', category: 'Memory',  difficulty: 'Medium' },
+  { id: 'typing',    name: 'Money Heist Typing Test',          description: 'Race the clock typing heist quotes as fast as you can.',          image: '/images/typing_test.jpg',         emoji: '💰', category: 'Typing',  difficulty: 'Medium' },
+  { id: 'hangman',   name: 'Corporate Hangman',                description: 'Guess office buzzwords before the boss fires you!',               image: '/images/hangman.jpg',             emoji: '🏢', category: 'Word',    difficulty: 'Easy'   },
+  { id: 'quiz',      name: 'Squid Game Quiz',                  description: 'Survive five deadly trivia questions from the hit show.',          image: '/images/game_quiz.jpg',           emoji: '🦑', category: 'Trivia',  difficulty: 'Hard'   },
+  { id: 'scramble',  name: 'Friends Word Scramble',            description: "Unscramble iconic Friends words before you're out of lives.",      image: '/images/word_scramble.jpg',       emoji: '📝', category: 'Word',    difficulty: 'Easy'   },
+  { id: 'tictactoe', name: 'Riverdale Tic Tac Toe',            description: 'Classic Tic Tac Toe with a Riverdale twist — 2 players.',          image: '/images/tictactoe.jpg',           emoji: '⭕', category: 'Board',   difficulty: 'Easy'   },
+  { id: 'numguess',  name: 'Stranger Things Number Guessing',  description: 'Guess the secret number before the Demogorgon gets you.',          image: '/images/number_guessing.jpg',     emoji: '🔢', category: 'Puzzle',  difficulty: 'Medium' },
+  { id: 'wordguess', name: 'Insidious Word Hunt',              description: 'Guess the spooky hidden word one letter at a time.',               image: '/images/word_guessing.jpg',       emoji: '👻', category: 'Word',    difficulty: 'Medium' },
+  { id: 'rps',       name: 'Bridgerton Rock Paper Scissors',   description: 'A classic RPS match with a regency-era Bridgerton theme.',         image: '/images/rock_paper_scissors.jpg', emoji: '🪶', category: 'Arcade',  difficulty: 'Easy'   },
+  { id: 'snake',     name: 'Forest Snake Adventure',           description: 'Control the snake through the forest — how long can you survive?',  image: '/images/snake.jpg',              emoji: '🐍', category: 'Arcade',  difficulty: 'Hard'   },
+];
